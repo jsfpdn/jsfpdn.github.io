@@ -9,24 +9,8 @@
           ·
         </span>
         <span>
-          {{ i18n "wordCount" . }}
-        </span>
-        <span class="split">
-          ·
-        </span>
-        <span>
           {{ i18n "minuteRead" . }}
         </span>
-    </div>
-
-    
-    {{ if or .Site.Params.showToc .Params.showToc }}
-        {{ partial "toc.html" . }}
-    {{ end }}
-
-
-    <div class="content">
-      {{ .Content }}
     </div>
 
     {{ with .Params.tags }}
@@ -36,10 +20,17 @@
             {{ end }}
         </div>
     {{ end}}
-    
+
+    {{ if or .Site.Params.showToc .Params.showToc }}
+        {{ partial "toc.html" . }}
+    {{ end }}
+
+    <div class="content">
+      {{ .Content }}
+    </div>
+
     {{ partial "comment.html" . }}
 
 </section>
 
 {{ end }}
-

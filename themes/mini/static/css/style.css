@@ -115,7 +115,7 @@ h4:hover a {
 }
 p code {
   font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace;
-  font-size: inherit;
+  font-size: 0.85em;
   background-color: rgba(0, 0, 0, 0.06);
   padding: 0 2px;
   border: 1px solid rgba(0, 0, 0, 0.08);

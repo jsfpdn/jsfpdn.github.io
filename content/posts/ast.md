@@ -94,7 +94,6 @@ Now we can simply create an automaton associated with each non-terminal as follo
 
 ![recursive finite state machines](/static/rfsm.png)
 
-
 Note that this approach is as powerful as
 [table-driven parsing](http://fpl.cs.depaul.edu/jriely/448/extras/cytron-06-ll-parsing.pdf),
 only the stack is implicit and hidden; it is the call stack of mutually

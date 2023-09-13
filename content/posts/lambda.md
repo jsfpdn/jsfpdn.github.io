@@ -8,31 +8,31 @@ summary: "Implementing boolean values and basic boolean operators in untyped λ 
 
 Untyped lambda calculus is about three things:
 
-* **variables**, e.g. $x$
-* **function abstraction** $\lambda x.M$ ($x$ is the argument of the function,
-  $M$ is the function body which may or may not have occurances of $x$ and other variables),
-* and **function application** $M N$ (applying argument $N$ to $M$).
+* **variables**, e.g. `x`
+* **function abstraction** `λx.M` (`x` is the argument of the function,
+  `M` is the function body which may or may not have occurances of `x` and other variables),
+* and **function application** `M N` (applying argument `N` to `M`).
 
 In this post, I try to show and explain how boolean operators and pairs can be encoded
-in untyped $\lambda$ calculus using only the three constructs.
+in untyped λ calculus using only the three constructs.
 
 > To follow along, it is useful to know what a <cite>reduction[^1] [^2]</cite> is.
 
-## $\text{True}$ and $\text{False}$ terms
+## `True` and `False` terms
 
-First, let's build $\text{True}$ and $\text{False}$ terms:
+First, let's build `True` and `False` terms:
 
 $$
 \text{True} = \lambda xy. x \newline
 \text{False} = \lambda xy. y
 $$
 
-$\text{True}$ and $\text{False}$ are nothing but a functions taking two arguments and return a single value.
-$\text{True}$ returns the first argument $x$, $\text{False}$ returns the second argument $y$. That's it.
+`True` and `False` are nothing but a functions taking two arguments and return a single value.
+`True` returns the first argument `x`, `False` returns the second argument `y`. That's it.
 
 ## If-then-else Operator
 
-To move forward, we'll build an if-then-else operator, or $\text{ite}$ for short. It will be a function
+To move forward, we'll build an if-then-else operator, or `ite` for short. It will be a function
 taking three arguments -- a condition and two arguments to be evaluated depending on the result of the condition.
 
 $$
@@ -40,7 +40,7 @@ $$
 \text{ite} \ \text{False} \ M \ N \rightarrow^* N
 $$
 
-> By $M \rightarrow^* N$ I mean that the term $M$ is $\beta \eta$-reduced to $N$ in zero or more steps.
+> By `M →* N` I mean that the term `M` is βη-reduced to `N` in zero or more steps.
 > Also, I do not care about reduction strategies in this post, reduxes are chosen ad-hoc.
 
 Let's dig into each case.
@@ -50,8 +50,8 @@ $$
 \text{False} \ M \ N \rightarrow (\lambda xy. y) \ M \ N \rightarrow (\lambda y. y) \ N \rightarrow N
 $$
 
-$\text{True}$ and $\text{False}$ terms work as "selection operators" on their own! What we need
-is to create the $\text{ite}$ function which will apply the condition to the two arguments and that's it.
+`True` and `False` terms work as "selection operators" on their own! What we need
+is to create the `ite` function which will apply the condition to the two arguments and that's it.
 
 $$
 \text{ite} = \lambda xyz. xyz
@@ -69,9 +69,9 @@ $$
 \rightarrow M                                            \quad \small \text{// Apply function to N}
 $$
 
-## $\text{And}$ Operator
+## `And` Operator
 
-Let's build an $\text{And}$ operator. Intuitively, we aim to build something that acts like this:
+Let's build an `And` operator. Intuitively, we aim to build something that acts like this:
 
 
 $$
@@ -81,9 +81,8 @@ $$
 \text{And} \ \text{False} \ \text{False} \rightarrow^* \text{False}
 $$
 
-That is, we're building a function which takes two arguments and returns a single value $\text{True}$ or
-$\text{False}$.
-We can go further and case for each case plug in what we already know (that is $\text{True}$ and $\text{False}$ terms):
+That is, we're building a function which takes two arguments and returns a single value `True` or `False`.
+We can go further and case for each case plug in what we already know (that is `True` and `False` terms):
 
 $$
 \text{And} \ \text{True} \ \text{True} \rightarrow^* \text{And} \ (\lambda xy. x) \ (\lambda xy. x) \rightarrow^* (\lambda xy. x) \newline
@@ -92,8 +91,8 @@ $$
 \text{And} \ \text{False} \ \text{False} \rightarrow^* \text{And} \ (\lambda xy. y) \ (\lambda xy. y) \rightarrow^* (\lambda xy. y)
 $$
 
-We can look at it this way: if the first argument, $x$, is $\text{True}$, we must return the value of $y$.
-Otherwise, we immediately know that the result of $\text{And}$ is $\text{False}$ (that is $x$).
+We can look at it this way: if the first argument, `x`, is `True`, we must return the value of `y`.
+Otherwise, we immediately know that the result of `And` is `False` (that is `x`).
 This is the function that does exactly that:
 
 $$
@@ -115,10 +114,10 @@ $$
 \rightarrow \lambda xy. \ y = \text{False}
 $$
 
-## $\text{Or}$ Operator
+## `Or` Operator
 
-Similarily to $\text{And}$, $\text{Or}$ takes two terms. If the first argument $x$ is $\text{True}$, $\text{True}$ is returned,
-otherwise $y$ is returned.
+Similarily to `And`, `Or` takes two terms. If the first argument `x` is `True, `True` is returned,
+otherwise `y` is returned.
 
 $$
 \text{Or} = \lambda xy. \ \text{ite} \ x \ x \ y \newline
@@ -139,14 +138,14 @@ $$
 \rightarrow \lambda xy. \ x = \text{True}
 $$
 
-## $\text{Not}$ Operator
+## `Not` Operator
 
-$\text{Not}$ takes a single term $x$ and computes the negation.
-If $x$ is $\text{True}$, $\text{False}$ is returned, otherwise $\text{True}$ is returned.
+`Not` takes a single term `x` and computes the negation.
+If `x` is `True`, `False` is returned, otherwise `True` is returned.
 
-### Constructing $\text{Not}$ Intuitively
+### Constructing `Not` Intuitively
 
-We'll begin with an intuitive construction of $\text{Not}$, building it exactly as we've described
+We'll begin with an intuitive construction of `Not`, building it exactly as we've described
 above how it should behave:
 
 $$
@@ -169,15 +168,15 @@ $$
 \rightarrow_\alpha \lambda xy. \ y = \text{False}
 $$
 
-### Alternative $\text{Not}$ Construction
+### Alternative `Not` Construction
 
-$\text{Not}$ can be alternatively defined as:
+`Not` can be alternatively defined as:
 
 $$
 \text{Not} = \lambda xyz. \ x \ z \ y
 $$
 
-Let's check $\text{Not} \ \text{False}$ this time:
+Let's check `Not False` this time:
 
 $$
 \text{Not} \ \text{False} \newline
