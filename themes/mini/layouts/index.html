@@ -11,7 +11,7 @@
           <div>
             <h1 class="title"><a href='{{ .RelPermalink }}'>{{ $title }}</a></h1>
             <div class ="date">
-                <time datetime="{{ .PublishDate }}">{{ i18n "publishDate" . }}</time>  
+                <time datetime="{{ .PublishDate }}">{{ i18n "publishDate" . }}</time>
             </div>
           </div>
 
@@ -19,7 +19,9 @@
               <div class="summary">{{ $summary | plainify | htmlUnescape }}</div>
           {{ end }}
 
+
         </section>
+
     {{ end }}
 
     {{ if or ($paginator.HasPrev) ($paginator.HasNext) }}
@@ -31,7 +33,7 @@
                   </a>
             </span>
           {{ end }}
-          
+
           {{ if $paginator.HasNext }}
               <span class="next">
                   <a href="{{.Paginator.Next.URL}}">

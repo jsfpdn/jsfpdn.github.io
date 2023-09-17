@@ -93,15 +93,15 @@ pre {
 .markdown-image img {
   max-width: 100%;
 }
-.anchor { 
-  font-size: 100%; 
-  visibility: hidden; 
+.anchor {
+  font-size: 100%;
+  visibility: hidden;
   color:silver;
 }
 h1:hover a,
 h2:hover a,
 h3:hover a,
-h4:hover a { 
+h4:hover a {
   visibility: visible
 }
 .highlight pre {
@@ -280,7 +280,7 @@ nav.navigation a.button {
 
 /* index post list */
 #list-page {
-  max-width: 580px;
+  max-width: 720px;
   margin: 0 auto;
   padding: 0 24px;
 }
@@ -414,7 +414,7 @@ nav.navigation a.button {
 }
 
 #archive .group {
-  margin: 24px auto; 
+  margin: 24px auto;
 }
 #archive .group .key {
   font-size: 20px;
