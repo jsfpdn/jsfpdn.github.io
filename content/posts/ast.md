@@ -1,7 +1,7 @@
 ---
 title: "Syntactic Analysis and Abstract Syntax Trees"
 date: 2022-12-03T19:19:00+02:00
-tags: ["compilers", "theory", "parsers", "ast"]
+tags: ["compilers", "theory", "parsers"]
 summary: About syntactic analysis, syntax validation, recursive descent parsing,
          push-down automata, abstract syntax trees, attribute grammars and
          semantic functions.

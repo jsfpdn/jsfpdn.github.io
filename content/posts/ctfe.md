@@ -1,7 +1,7 @@
 ---
 title: "Compile-Time Function Evaluation"
 date: 2023-03-04T10:19:00+02:00
-tags: ["compilers", "c++", "zig", "ast"]
+tags: ["compilers", "c++", "zig", "parsers"]
 summary: "Brief overview of two possible implementations of compile-time function evaluation: recursive walks over the AST and byte-code interpretation."
 ---
 

@@ -53,7 +53,11 @@ either during my studies, my work or in my spare time.
 - [Producing Wrong Data Without Doing Anything Obviously Wrong!](https://users.cs.northwestern.edu/~robby/courses/322-2013-spring/mytkowicz-wrong-data.pdf)
   How experimental setups and measurement bias can cause a systems researcher to draw wrong conclusions from an experiment.
 
-#### Parsers
+### Runtimes & Interpreters
+
+- [Speculation in JavaScriptCore](https://webkit.org/blog/10308/speculation-in-javascriptcore/)
+
+### Parsers
 
 - [Rewriting the Ruby parser](https://railsatscale.com/2023-06-12-rewriting-the-ruby-parser/)
 - [Which Parsing Approach?](https://tratt.net/laurie/blog/2020/which_parsing_approach.html)
@@ -75,6 +79,9 @@ either during my studies, my work or in my spare time.
 - [SWIM: scalable weakly-consistent infection-style process group membership protocol](https://ieeexplore.ieee.org/document/1028914)
 - [Lifeguard: Local Health Awareness for More Accurate Failure Detection](https://arxiv.org/abs/1707.00788)
 - [Viewstamped Replication Revisited](https://pmg.csail.mit.edu/papers/vr-revisited.pdf)
+- [Towards Modern Development of Cloud Applications](https://sigops.org/s/conferences/hotos/2023/papers/ghemawat.pdf).
+  A new programming paradigm encouraging developers to write monolithic apps divided into logical components while
+  deferring the execution, deployment and atomic roll-out of components to the runtime.
 
 ---
 
@@ -95,6 +102,10 @@ either during my studies, my work or in my spare time.
 - [A Lower Bound on the Size of Decomposable Negation Normal Form](https://ojs.aaai.org/index.php/AAAI/article/view/7600)
 - [Dynamic Minimization of Sentential Decision Diagrams](https://ojs.aaai.org/index.php/AAAI/article/view/8690)
 - [SDDs Are Exponentially More Succinct than OBDDs](https://ojs.aaai.org/index.php/AAAI/article/view/10107)
+
+### Concurrency
+
+- [Grammars as Processes](https://link.springer.com/chapter/10.1007/3-540-45711-9_16)
 
 ---
 

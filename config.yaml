@@ -40,7 +40,6 @@ social:
 # Site parameters
 params:
   # Site Author
-  author: jsfpdn 
   # Author biography
   bio: programming, compilers, tooling, go, zig...
   # Site Description, used in HTML meat
