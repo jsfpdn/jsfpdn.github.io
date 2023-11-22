@@ -31,7 +31,6 @@ markup:
 
 # Social links in footer, support github,twitter,stackoverflow,facebook
 social:
-  # e.g.
   github: https://github.com/jsfpdn
   twitter: https://twitter.com/jsfpdn
   linkedin: https://www.linkedin.com/in/josef-podany/
@@ -41,9 +40,9 @@ social:
 params:
   # Site Author
   # Author biography
-  bio: programming, compilers, tooling, go, zig...
+  bio: blabbering about **programming**, **computer science** & **stuff**
   # Site Description, used in HTML meat
-  description: jsfpdn -- compilers, tooling, go, zig
+  description: jsfpdn -- blabbering about programming, compilers, computer science & stuff
 
   # To enable RSS, you could set `enableRSS: true`, default is `true`
   enableRSS: true

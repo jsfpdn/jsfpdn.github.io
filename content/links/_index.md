@@ -93,6 +93,10 @@ either during my studies, my work or in my spare time.
 
 ## Theoretical Computer Science
 
+### Data Structures
+
+- [The Adaptive Radix Tree: ARTful Indexing for Main-Memory Databases](https://db.in.tum.de/~leis/papers/ART.pdf)
+
 ### Boolean Functions
 
 - [Symbolic Boolean Manipulation with Ordered Binary-Decision Diagrams](https://dl.acm.org/doi/pdf/10.1145/136035.136043)
@@ -132,3 +136,4 @@ either during my studies, my work or in my spare time.
 - [Facebook's Katran](https://engineering.fb.com/2018/05/22/open-source/open-sourcing-katran-a-scalable-network-load-balancer/)
 - [Security Flaws Induced by CBC Padding Applications](https://www.iacr.org/archive/eurocrypt2002/23320530/cbc02_e02d.pdf)
 - [Practical Padding Oracle Attacks](https://www.usenix.org/legacy/event/woot10/tech/full_papers/Rizzo.pdf)
+- [On the foolishness of "natural language programming"](https://www.cs.utexas.edu/users/EWD/transcriptions/EWD06xx/EWD667.html)
