@@ -16,6 +16,7 @@ The official assignment was very vague and open-ended, something along the lines
 think of something you'd like to try out and implement it, it does not have to be perfect.
 It has to be a compiler (not an interpreter) and the features are up to you to choose."_
 So we've decided to implement _imperative, statically typed,
+[expression-oriented](https://en.wikipedia.org/wiki/Expression-oriented_programming_language),
 syntactically scoped language_ (how exciting, I know...) with handy syntax for multi-dimensional arrays,
 chaining of relational operators, ternary operators and all the classical stuff
 (for, while and do-while loops, if statements, forward function declarations...).
@@ -233,6 +234,7 @@ in the recursive call chain:
 > \* There's no such things as statement in yatl -- everything is designed as an expression, control-flow
 > statements are expressions of type `unit`. This makes these "special expressions" assignable to variables of type unit,
 > but since unit does not hold any value, those variables and assignments are not emitted to LLVM IR.
+> This is why the language is [expression-oriented](https://en.wikipedia.org/wiki/Expression-oriented_programming_language).
 
 ## The Compiler Experience
 

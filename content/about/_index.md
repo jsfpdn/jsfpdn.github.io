@@ -3,8 +3,10 @@ title: "About me"
 hiddenPostSummaryInHomePage: true
 ---
 
-I'm a computer science student at Masaryk University doing my master's in theoretical computer science.
-I've received bachelor's in mathematical computer science.
+I'm a computer science student at Masaryk University doing my master's in theoretical computer science and writing a
+thesis about [Sentential Decision Diagrams](https://web.cs.ucla.edu/~guyvdb/slides/INFORMS15.pdf) implemented in Rust.
+I have bachelor's in mathematical computer science where my thesis focused on similarity search techniques and
+optimizing similarity search index based in [metric spaces](https://en.wikipedia.org/wiki/Metric_space).
 I focus on **compilers**, **parallel programming**, **distributed systems**, **functional programming** and
 **algorithm & data structure design**. I write code mainly in **Go**, **Rust** and **Zig**.
 
@@ -17,6 +19,7 @@ Some things I am (or was) working on:
 
 - [Regatta](https://engineering.jamf.com/regatta/) -- helping out with the development of a globally distributed key-value database for the edge
   ([source code](https://github.com/jamf/regatta), [helm chart](https://engineering.jamf.com/regatta/))
+- [sdd-rs](https://github.com/jsfpdn/sdd-rs) -- bottom-up sentential decision diagram compiler written in Rust.
 - [MH-Tree](https://gitlab.fi.muni.cz/disa/public/hulls/mh-tree) -- similarity search index structure in metric spaces
   which was the main focus of my [bachelor's thesis](https://is.muni.cz/th/iwjhs/josef_podany_bachelors_thesis.pdf)
 - [yatlc](https://github.com/jsfpdn/yatlc) -- toy compiler backed by LLVM for a small imperative language
