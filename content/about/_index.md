@@ -30,6 +30,9 @@ Some things I am (or was) working on:
 
 Some of my presentations:
 
+- [A Look Inside the Go Compiler](/static/go_compiler.pdf) -- talk given at [Gophercamp 2025](https://gophercamp.cz/)
+- [A Rust Library For Manipulating Sentential Decision Diagrams](/static/sddrs.pdf) -- presentation for my master's
+  thesis defence
 - [Compile-Time Function Evaluation](/static/ctfe.pdf) -- how compile-time function evaluation can be implemented
   in a compiler, examples in C++ and Zig
 - [Dynamicity of MH-Trees](/static/mh_tree_extended.pdf) (or a [shorter version](/static/mh_tree.pdf)) --
